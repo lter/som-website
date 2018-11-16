@@ -2,9 +2,7 @@
 title: "Authorship"
 ---
 
-_Significant portions of this policy came from NutNet, who have carefully thought about how to make data sharing and collaboration transparent, open, and consistent to encourage further engagement.  The NutNet authorship policy can be found_ http://www.nutnet.umn.edu/authorship.
-
-please make a new html
+_Significant portions of this policy came from NutNet, who have carefully thought about how to make data sharing and collaboration transparent, open, and consistent to encourage further engagement.  The NutNet authorship policy can be found at_ http://www.nutnet.umn.edu/authorship.
 
 ##Data are public, and harmonizing them into something meaningful is hard
 Data collected as part of NSF funded networks and observatories (LTER, CZO, and NEON) are intended to be publically available.  Much of this legacy data, however, has been collected and archived in ways that preclude meaningful cross site synthesis.  The major objective of this working group, is to collate and harmonize these datasets in a scripted, tractable manner.  

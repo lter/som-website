@@ -5,20 +5,20 @@ navbar:
   left:
     - text: "About us"
       href: index.html
-    - text: "Tools & tutorials"
-      href: tools_tutorials.html
     - text: "Workflow"
       href: workflow.html
     - text: "Database"
       href: database.html
     - text: "Authorship"
       href: authorship.html
-    - text: "Products"
-      href: products.html
     - text: "Projects"
       href: projects.html
+    - text: "Products"
+      href: products.html
     - text: "Links"
       href: links.html
+    - text: "Tools & tutorials"
+      href: tools_tutorials.html
     - text: "QC plots"
       href: QC_plots.html
   right:

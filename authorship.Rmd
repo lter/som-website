@@ -15,7 +15,6 @@ Our primary goals in the authorship process are to consistently, accurately and 
 Papers using the LTER-CZO-NEON database to address scientific questions should follow the authorship policy.  Separate authorship for the methods and [database documentation paper are described below](#database_anchor).
 
 ## Authorship process: Overview
-Our primary goals in authorship process are to consistently, accurately and transparently attribute the contribution of each author on the paper, to encourage participation in manuscripts by interested scientists, and to ensure that each author has made sufficient contribution to the paper to warrant authorship. 
 
 **1. Read these authorship policies and guidelines.**  
 
@@ -54,7 +53,7 @@ Authorship must be earned through a _substantial contribution._ Traditionally, p
 
 Manuscripts published using this synthesis will be accompanied by a supplemental table indicating authorship contributions. You can create and share a standard authorship table using google docs and the cirteral listed  above. For opt-in papers, a co-author is expected to have **at least two** of the following areas checked in the rubric below.  
 
-### Authorship rubric, for papers using the database   {#rubric_anchor}  
+###Authorship rubric, for papers using the database   {#rubric_anchor}  
 * Developed and framed the research question.  
 * Analyzed data or contributed to data analyses.   
 * Conducted model simulation or contributed to model simulations.  

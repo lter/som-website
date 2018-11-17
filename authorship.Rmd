@@ -17,7 +17,7 @@ Papers using the LTER-CZO-NEON database to address scientific questions should f
 
 **1. Read these authorship policies and guidelines.**  
 
-**2. Consult the projects tab for current proposals and active manuscripts,** and contact the listed lead author on any similar proposal to minimize overlap, or to join forces.  
+**2. Consult the [projects page](projects.html) for current proposals and active manuscripts,** and contact the listed lead author on any similar proposal to minimize overlap, or to join forces.  
 
 **3. Prepare a manuscript proposal,** and email Will Wieder (wwieder [at] ucar.edu). Your proposal will list the lead author(s), the title and abstract body, and the specific data types or fields from the database that you wish to use. You can also specify more detail about response and predictor variables (if appropriate), and indicate a timeline for analysis and writing.
 

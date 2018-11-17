@@ -1,5 +1,5 @@
 name: "LTER-CZO-NEON soil organic matter synthesis"
-output_dir: "../docs"
+output_dir: "docs"
 navbar:
   title: "SOM synthesis"
   left:

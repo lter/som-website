@@ -1,0 +1,8 @@
+---
+title: "example-proj"
+author: "Will Wieder"
+output: html_document
+---
+
+
+here is an example project

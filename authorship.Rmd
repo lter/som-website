@@ -4,7 +4,6 @@ title: "Authorship"
 
 _Significant portions of this policy came from NutNet, who have carefully thought about how to make data sharing and collaboration transparent, open, and consistent to encourage further engagement.  The NutNet authorship policy can be found at_ http://www.nutnet.umn.edu/authorship.
 
-
 ##Data are public, and harmonizing them into something meaningful is hard
 Data collected as part of NSF funded networks and observatories (LTER, CZO, and NEON) are intended to be publically available.  Much of this legacy data, however, has been collected and archived in ways that preclude meaningful cross site synthesis.  The major objective of this working group, is to collate and harmonize these datasets in a scripted, tractable manner.  
 
@@ -18,7 +17,7 @@ Papers using the LTER-CZO-NEON database to address scientific questions should f
 
 **1. Read these authorship policies and guidelines.**  
 
-**2. Consult the projects tab for current proposals and active manuscripts,** and contact the listed lead author on any similar proposal to minimize overlap, or to join forces.  
+**2. Consult the [projects page](projects.html) for current proposals and active manuscripts,** and contact the listed lead author on any similar proposal to minimize overlap, or to join forces.  
 
 **3. Prepare a manuscript proposal,** and email Will Wieder (wwieder [at] ucar.edu). Your proposal will list the lead author(s), the title and abstract body, and the specific data types or fields from the database that you wish to use. You can also specify more detail about response and predictor variables (if appropriate), and indicate a timeline for analysis and writing.
 

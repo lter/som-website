@@ -2,6 +2,8 @@
 title: "example-proj"
 author: "Will Wieder"
 output: html_document
+params: 
+  output_dir: "../docs/proj-pages"
 ---
 
 

@@ -7,9 +7,9 @@ output: html_document
 
 # This workflow harvests html files generated from the
 # soilHarmonization::homogenization_QC(), copies those html files from Aurora to
-# the docs/qaqc folder of the lterwg-som GitHub repository, and generates
+# the docs/qaqc folder of the lter/som-website GitHub repository, and generates
 # references to those files as hyperlinks on the QC_plots tab of the project
-# website (https://lter.github.io/lterwg-som/index.html).
+# website (https://lter.github.io/som-website/QC_plots.html).
 
 # Pivotal to this workflow is the transfer of homogenization output, including
 # the html files from Google Drive to the docs/qaqc folder in the project
@@ -37,7 +37,7 @@ file.copy(from = list.files(path = '/home/shares/lter-som/Data-downloads/',
                             full.names = TRUE,
                             pattern = "*_HMGZD_QC.html",
                             recursive = TRUE),
-          to = '/home/earl/localRepos/lterwg-som/docs/qaqc/',
+          to = '/home/earl/localRepos/som-website/docs/qaqc/',
           overwrite = TRUE,
           recursive = FALSE)
 ```
@@ -49,7 +49,7 @@ file.copy(from = list.files(path = '/home/shares/lter-som/Data-downloads/',
 # [Stacy_2015_ssCZO_Bull_HMGZD_QC](qaqc/Stacy_2015_ssCZO_Bull_HMGZD_QC.html) 
 
 qaqcFileList <- tibble(
-  qaqcFileList = list.files(path = '/home/earl/localRepos/lterwg-som/docs/qaqc/',
+  qaqcFileList = list.files(path = '/home/earl/localRepos/som-website/docs/qaqc/',
                             full.names = FALSE,
                             recursive = FALSE),
   qaqcFileListSansExt = file_path_sans_ext(qaqcFileList)

@@ -1,7 +1,50 @@
 ---
 title: "Projects"
 ---
+```{r  include=FALSE}
+library(kableExtra)
+library(dplyr)
+library(knitr)
+            
+```
 
-## Below is a list of projects proposed to use the LTER-CZO-NEON dataset:  
+## Below is a list of projects proposed to use the SoDaH database:  
 
-[example project](proj-pages/example-proj.html) 
+
+
+```{r echo = FALSE, results = 'asis'}
+dt <- data.frame(
+  Link    = rep(1,7,1),
+  Project = c('White paper' ,
+              "Database paper",
+              'Bulk Density & SOC', 
+              'Soil stoichiometric coupling & variability',
+              'Big gradients and SOC controls', 
+              'Linking root and soil carbon across sites',
+              'Detecting a signal from the noise: Power analysis and SOC variability'),
+  Lead    = c('K. Lajtha & S. Billings',
+              "W. Wieder", 
+              'S. Grandy', 
+              'E. Kyker-Snowman',
+              'K. Georgiou', 
+              'A. Malhotra',
+              'D. Pierson'),
+  Status  = c('Revising text', 
+              "Finalizing database, 2019 AGU poster", 
+              'S. Weintraub is exploring PTFs w/ NEON data', 
+              'In progress',
+              'Machine learning with WoSIS database, 2019 AGU poster', 
+              'In progress',
+              'In progress, how do we capture heterogeniety with nested design?'
+              )
+)
+dt_link <- c(("proj-pages/testbed.jpg"))
+
+dt %>% 
+  mutate(Link = cell_spec(row.names(.), "html", link = dt_link)) %>%
+  kable("html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed")) 
+
+            
+#kable(dt)
+```

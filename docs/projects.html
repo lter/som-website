@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -22,9 +23,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -72,9 +73,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -88,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -98,6 +96,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -113,7 +114,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -133,6 +133,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -154,19 +191,73 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -179,7 +270,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">SOM synthesis</a>
+      <a class="navbar-brand" href="index.html">SoDaH</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -232,9 +323,126 @@ $(document).ready(function () {
 </div>
 
 
-<div id="projects_anchor" class="section level2">
-<h2>Below is a list of projects proposed to use the LTER-CZO-NEON dataset:</h2>
-<p><a href="proj-pages/example-proj.html">example project</a></p>
+<div id="below-is-a-list-of-projects-proposed-to-use-the-sodah-database" class="section level2">
+<h2>Below is a list of projects proposed to use the SoDaH database:</h2>
+<table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Link
+</th>
+<th style="text-align:left;">
+Project
+</th>
+<th style="text-align:left;">
+Lead
+</th>
+<th style="text-align:left;">
+Status
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">1</a>
+</td>
+<td style="text-align:left;">
+White paper
+</td>
+<td style="text-align:left;">
+K. Lajtha &amp; S. Billings
+</td>
+<td style="text-align:left;">
+Revising text
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">2</a>
+</td>
+<td style="text-align:left;">
+Database paper
+</td>
+<td style="text-align:left;">
+W. Wieder
+</td>
+<td style="text-align:left;">
+Finalizing database, 2019 AGU poster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">3</a>
+</td>
+<td style="text-align:left;">
+Bulk Density &amp; SOC
+</td>
+<td style="text-align:left;">
+S. Grandy
+</td>
+<td style="text-align:left;">
+S. Weintraub is exploring PTFs w/ NEON data
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">4</a>
+</td>
+<td style="text-align:left;">
+Soil stoichiometric coupling &amp; variability
+</td>
+<td style="text-align:left;">
+E. Kyker-Snowman
+</td>
+<td style="text-align:left;">
+In progress
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">5</a>
+</td>
+<td style="text-align:left;">
+Big gradients and SOC controls
+</td>
+<td style="text-align:left;">
+K. Georgiou
+</td>
+<td style="text-align:left;">
+Machine learning with WoSIS database, 2019 AGU poster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">6</a>
+</td>
+<td style="text-align:left;">
+Linking root and soil carbon across sites
+</td>
+<td style="text-align:left;">
+A. Malhotra
+</td>
+<td style="text-align:left;">
+In progress
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="proj-pages/testbed.jpg" style="     ">7</a>
+</td>
+<td style="text-align:left;">
+Detecting a signal from the noise: Power analysis and SOC variability
+</td>
+<td style="text-align:left;">
+D. Pierson
+</td>
+<td style="text-align:left;">
+In progress, how do we capture heterogeniety with nested design?
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 
   <p><br /></p>
@@ -267,6 +475,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

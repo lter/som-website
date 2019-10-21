@@ -4,22 +4,28 @@ title: "Products"
 
 ## Products from this activity include:
 
-### Presentations
+## Code
 
-* Brigham, L., D. Pierson, K. Lajtha, K. Georgiou, S. Earl, and W. Wieder. Making sense of soil organic matter: barriers and opportunities for cross-site synthesis. 2018 LTER All-Scientists' Meeting, Asilomar, California, USA. https://2018lterallscientistsmeeting.sched.com/event/FYpl/making-sense-of-soil-organic-matter-barriers-and-opportunities-for-cross-site-synthesis
-
-* Earl, S. J. Porter, and M. Martin. Making your data work harder: using shared data to enhance your research. 2018 LTER All-Scientists' Meeting, Asilomar, California, USA. https://2018lterallscientistsmeeting.sched.com/event/FYqK/making-your-data-work-harder-using-shared-data-to-enhance-your-research
-
-* AGU "Leveraging network science to evaluate mechanisms and models of soil organic matter stabilization and change" (2018)
-
-### Code
-
-* Most code related to analyses is on our project [GitHub page](https://github.com/lter/lterwg-som)
-* Code related to data processing is on the project GitHub page and in the [soilHarmonization](https://github.com/srearl/soilHarmonization) R package
+* [Data harmonization and aggregation scripts](https://github.com/srearl/soilHarmonization) that produced L1 and L2 data products
+* [Data visualization](https://github.com/lter/lterwg-som-shiny) code
+* Additional code for analyses is on our project [GitHub page](https://github.com/lter/lterwg-som)
 
 
-### Papers
+## Papers
 
-TBD
+* Malhotra, A., K Todd-Brown, L Nave, et al. (2019). The landscape of soil carbon data: emerging questions, synergies and databases. _Progress in Physical Geography: Earth and Environment_. [doi:10.1177/0309133319873309](https://doi.org/10.1177/0309133319873309). 
 
 
+## Presentations
+
+* Brigham, L., D. Pierson, K. Lajtha, K. Georgiou, S. Earl, and W. Wieder. "[Making sense of soil organic matter: barriers and opportunities for cross-site synthesis](https://2018lterallscientistsmeeting.sched.com/event/FYpl/making-sense-of-soil-organic-matter-barriers-and-opportunities-for-cross-site-synthesis)" 2018 LTER All-Scientists' Meeting, Asilomar, California, USA.
+
+* Earl, S. J. Porter, and M. Martin. "[Making your data work harder: using shared data to enhance your research](https://2018lterallscientistsmeeting.sched.com/event/FYqK/making-your-data-work-harder-using-shared-data-to-enhance-your-research)". 2018 LTER All-Scientists' Meeting, Asilomar, California, USA. 
+
+* Wieder, W. R., S. Earl, D. Pierson, K. Lajtha, & the LTER-SOM synthesis team. "Leveraging network science to evaluate mechanisms and models of soil organic matter stabilization and change" AGU 2018, oral presentation.
+
+* Wieder, W. R., K. Lajtha, S. Earl, D. Pierson & the LTER-SOM synthesis team "SOils DAta Harmonization Tools (SoDaH)" NCEAS Seminar, Oct 2019
+
+* Wieder, W. R., K. Lajtha, S. Earl, D. Pierson & the LTER-SOM synthesis team "Data synthesis with SoDah, the SOils DAta Harmonization Tools" LTER Information Managers Seminar, Nov 2019
+
+* Wieder, W. R., K. Lajtha, S. Earl, D. Pierson & the LTER-SOM synthesis team "Introducing SOils DAta Harmonization Tools" LTER Information Managers Seminar, AGU 2019, poster.

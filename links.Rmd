@@ -4,8 +4,8 @@ title: "Links"
 
 <!-- Start Writing Below in Markdown -->
 
-### Additional Data Sources: 
-Beyond LTER, CZO, and NEON sites our synthesis includes data from the:
+## Additional Data Sources: 
+### Beyond LTER, CZO, and NEON sites our synthesis includes data from the:
 
 
 [![NutNet](images/nutnet-white_horz.jpg)](http://www.nutnet.umn.edu/)
@@ -14,8 +14,8 @@ Beyond LTER, CZO, and NEON sites our synthesis includes data from the:
 [Detrital Input and Removal Experiment (DIRT)](https://dirtnet.wordpress.com/)
 
 
-### Complimentary synthesis efforts: 
-Several other synthesis efforts are underway including:
+## Complimentary synthesis efforts: 
+### Several other synthesis efforts are underway including:
 
 
 [![ISRaD](images/ISRaD.jpg)](https://international-soil-radiocarbon-database.github.io/ISRaD/)
@@ -24,7 +24,7 @@ Several other synthesis efforts are underway including:
 [![ICSN](images/iscn.jpg)](http://iscn.fluxdata.org/)
 
 
-### Modeling resources:
+## Modeling resources:
 We're building tools to use the soil biogeochemical testbed with data collected here
 
 

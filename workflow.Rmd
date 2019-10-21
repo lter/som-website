@@ -5,27 +5,31 @@ title: "Workflow"
 <!-- Start Writing Below in Markdown -->
 
 ### Our workflow: 
-1) Takes raw data;
-2) Homogonizes data into a common format; 
-3) Aggregates data into an R object;
-4) Aligns data within site;
-5) Averages data by location, experimental, and treatment levels;
-6) Provides data visualization and interpretation tools.
+1) Harmonizes raw data into a common format; 
+2) Aggregates data into an R object;
+3) Data visualization and interpretation tools (Shiny app);
+4) Data analysis and summary scripts.
 
 
 ![The schematic above illustrates our workflow](images/SynthesisWorkflow_1.png)
 
 ~ 
 
-### Using the soilHarmonization.R package 
+### Data harmonization
 
-Instructions for using the package can be found here
-https://github.com/srearl/soilHarmonization
+Instruction for using the soilHarmonization.R package [can be found here](https://github.com/srearl/soilHarmonization).
 
-
-~ 
 
 ### Data aggregation 
 
 Location data are aggregated with the harvest_HMGZD.R script
 
+
+### Data visualization
+
+Get a quick look at the data [using our Shiny app](https://cosima.nceas.ucsb.edu/lter-som/).
+
+
+### Data analysis 
+
+Get the latest _tarball_ [using this script](https://github.com/lter/lterwg-som/blob/master/data-processing/get_latest_som.R)

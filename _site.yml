@@ -1,7 +1,7 @@
-name: "LTER-CZO-NEON soil organic matter synthesis"
+name: "Soil Data Harmonization & Synthesis"
 output_dir: "docs"
 navbar:
-  title: "SOM synthesis"
+  title: "SoDaH"
   left:
     - text: "About us"
       href: index.html

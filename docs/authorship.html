@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -22,9 +23,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -72,9 +72,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -88,7 +86,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -98,6 +95,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -113,7 +113,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -133,6 +132,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -154,19 +190,73 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -179,7 +269,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">SOM synthesis</a>
+      <a class="navbar-brand" href="index.html">SoDaH</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -233,19 +323,14 @@ $(document).ready(function () {
 
 
 <p><em>Significant portions of this policy came from NutNet, who have carefully thought about how to make data sharing and collaboration transparent, open, and consistent to encourage further engagement. The NutNet authorship policy can be found at</em> <a href="http://www.nutnet.umn.edu/authorship" class="uri">http://www.nutnet.umn.edu/authorship</a>.</p>
-<div id="data-are-public-and-harmonizing-them-into-something-meaningful-is-hard" class="section level2">
-<h2>Data are public, and harmonizing them into something meaningful is hard</h2>
-<p>Data collected as part of NSF funded networks and observatories (LTER, CZO, and NEON) are intended to be publically available. Much of this legacy data, however, has been collected and archived in ways that preclude meaningful cross site synthesis. The major objective of this working group, is to collate and harmonize these datasets in a scripted, tractable manner.</p>
+<p>##Data are public, and harmonizing them into something meaningful is hard Data collected as part of NSF funded networks and observatories (LTER, CZO, and NEON) are intended to be publically available. Much of this legacy data, however, has been collected and archived in ways that preclude meaningful cross site synthesis. The major objective of this working group, is to collate and harmonize these datasets in a scripted, tractable manner.</p>
 <p>Many of the raw datasets collected for the database have already been published and archived in Electronic data interchange (EDI), or other data repositories. In some cases, data from unpublished sources have been included in the database (with permission of the data generators). For both published and unpublished data, personal knowledge about the individual sites and experiments are critical for accurately understanding the data products and linking across datasets. The willingness of many scientists to cooperate and collaborate is what makes this synthesis possible. We have attempted to lay out ground rules to establish a fair process for establishing authorship, and to be inclusive while not diluting the value of authorship on a manuscript.</p>
 <p>Our primary goals in the authorship process are to consistently, accurately and transparently attribute the contribution of each author on the paper, to encourage participation in manuscripts by interested scientists, and to ensure that each author has made sufficient contribution to the paper to warrant authorship. Towards this end we have developed authorship guidelines for both the initial database paper and subsequent scientific papers that use the database. <em>Please note, physical attendance at any of our meeting is not a requirement.</em></p>
 <p>Papers using the LTER-CZO-NEON database to address scientific questions should follow the authorship policy. Separate authorship for the methods and <a href="#database_anchor">database documentation paper are described below</a>.</p>
-</div>
 <div id="authorship-process-overview" class="section level2">
 <h2>Authorship process: Overview</h2>
 <p><strong>1. Read these authorship policies and guidelines.</strong></p>
-
 <p><strong>2. Consult the <a href="projects.html">projects page</a> for current proposals and active manuscripts,</strong> and contact the listed lead author on any similar proposal to minimize overlap, or to join forces.</p>
-
 <p><strong>3. Prepare a manuscript proposal,</strong> and email Will Wieder (wwieder [at] ucar.edu). Your proposal will list the lead author(s), the title and abstract body, and the specific data types or fields from the database that you wish to use. You can also specify more detail about response and predictor variables (if appropriate), and indicate a timeline for analysis and writing.</p>
 <p>Proposed ideas are reviewed by the authorship committee (Wieder &amp; Lajtha) to ensure there is sufficient distinction from proposed and ongoing papers. The authorship committee may suggest altering or combining analyses and papers to resolve issues of overlap.</p>
 <p>Following approval, the abstract will be posted to the projects tab of the website to communicate with the larger working group.</p>
@@ -261,33 +346,18 @@ The subject line of the email should include the phrase “OPT-IN PAPER.” This
 <p><strong>8. Final manuscripts should be reviewed and approved by each co-author before submission.</strong></p>
 <p><strong>9. All authors and co-authors should fill out their contribution in the <a href="#rubric_anchor">authorship rubric</a></strong> and attach it as supplementary material to manuscripts using the database. Lead authors are responsible for ensuring consistency in credit given for contributions, and may alter co-author’s entries in the table to do so. An easy way to manage the author table is with an online google sheet.</p>
 <p><strong>10. The lead author should carefully review the authorship contribution table</strong> to ensure that all authors have contributed at a level that warrants authorship and that contributions are consistently attributed among authors. Has each author made contributions in at least two areas in the authorship rubric? Did each author provide thoughtful, detailed feedback on the manuscript? Authors are encouraged to contact the workshop coordinators (Wieder &amp; Lajtha) about any confusion or conflicts.</p>
-</div>
-<div id="authorship-for-papers-using-the-database" class="section level2">
-<h2>Authorship for papers using the database</h2>
-<p>Following publication of the database, which we see as a public resource available through EDI and NCEAS/NCO, we hope numerous scientific questions can be addressed with this database and encourage the broader community to use this as a resource moving forward. Studies that use multi-site data from the LTER-CZO-NEON database are really leveraging the synthesis activities of the working group. Towards this end, we’re suggesting an opt-in approach where for the first <em>two years</em> following publication of the database paper.</p>
-<div id="who-should-opt-in" class="section level4">
-<h4>Who should opt in?</h4>
-<p>Authorship must be earned through a <em>substantial contribution.</em> Traditionally, project initiation and framing, data analysis and interpretation, and manuscript preparation are all authorship-worthy contributions, and remain so for manuscripts using our database. However, synthesis collaborators have also agreed that collaborators who lead a site from which data are being used in a paper can also opt-in as co-authors, under the following conditions: (1) the collaborators’ contributed to the generation of L1 data that form the basis for the database and are used in the paper’s analysis; and (2) that this collaborator makes additional contributions to the particular manuscript, including data analysis, writing, or editing.</p>
+<p>##Authorship for papers using the database Following publication of the database, which we see as a public resource available through EDI and NCEAS/NCO, we hope numerous scientific questions can be addressed with this database and encourage the broader community to use this as a resource moving forward. Studies that use multi-site data from the LTER-CZO-NEON database are really leveraging the synthesis activities of the working group. Towards this end, we’re suggesting an opt-in approach where for the first <em>two years</em> following publication of the database paper.</p>
+<p>####Who should opt in?<br />
+Authorship must be earned through a <em>substantial contribution.</em> Traditionally, project initiation and framing, data analysis and interpretation, and manuscript preparation are all authorship-worthy contributions, and remain so for manuscripts using our database. However, synthesis collaborators have also agreed that collaborators who lead a site from which data are being used in a paper can also opt-in as co-authors, under the following conditions: (1) the collaborators’ contributed to the generation of L1 data that form the basis for the database and are used in the paper’s analysis; and (2) that this collaborator makes additional contributions to the particular manuscript, including data analysis, writing, or editing.</p>
 <p>Manuscripts published using this synthesis will be accompanied by a supplemental table indicating authorship contributions. You can create and share a standard authorship table using google docs and the cirteral listed above. For opt-in papers, a co-author is expected to have <strong>at least two</strong> of the following areas checked in the rubric below.</p>
-</div>
-<div id="rubric_anchor" class="section level3">
-<h3>Authorship rubric, for papers using the database</h3>
-<ul>
-<li>Developed and framed the research question.<br />
-</li>
-<li>Analyzed data or contributed to data analyses.<br />
-</li>
-<li>Conducted model simulation or contributed to model simulations.<br />
-</li>
-<li>Helped to harmonize and aggregate the raw data to cross-site dataset (Level 1a data).<br />
-</li>
-<li>Developed and contributed tools to synthesize and analyze the aggregated (Level 1b data).<br />
-</li>
-<li>Wrote the majority of at least one of the sections of the paper.<br />
-</li>
-<li>Contributed to writing the paper by providing suggestions, text, citations, copy editing.</li>
-</ul>
-</div>
+<p>###Authorship rubric, for papers using the database {#rubric_anchor}<br />
+* Developed and framed the research question.<br />
+* Analyzed data or contributed to data analyses.<br />
+* Conducted model simulation or contributed to model simulations.<br />
+* Helped to harmonize and aggregate the raw data to cross-site dataset (Level 1a data).<br />
+* Developed and contributed tools to synthesize and analyze the aggregated (Level 1b data).<br />
+* Wrote the majority of at least one of the sections of the paper.<br />
+* Contributed to writing the paper by providing suggestions, text, citations, copy editing.</p>
 <div id="database_anchor" class="section level3">
 <h3>Authorship rubric for the database paper</h3>
 <p>Invitations for authorship on the ‘database paper’ that documents the process and product of these efforts, will be extended to anyone who can complete two of the following criteria:</p>
@@ -337,6 +407,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

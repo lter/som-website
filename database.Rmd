@@ -10,7 +10,4 @@ title: "Database"
   To date we have data from >140 locations with >360,000 rows of information
   
 ### You can explore our data here [**Link to the Shiny app!**](https://cosima.nceas.ucsb.edu/lter-som/)
-
-<br>
-  
-![This map shows data locations](images/LocationMap.png)
+![This map shows data locations](images/Global_map2.png)

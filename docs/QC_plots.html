@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -22,9 +23,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -72,9 +72,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -88,7 +86,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -98,6 +95,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -113,7 +113,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -133,6 +132,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -154,19 +190,73 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -179,7 +269,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">SOM synthesis</a>
+      <a class="navbar-brand" href="index.html">SoDaH</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -242,319 +332,6 @@ file_list
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-<a href="qaqc/AND_10YR_CN_HMGZD_QC.html">AND_10YR_CN_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/AND_10YR_DenseFrac_HMGZD_QC.html">AND_10YR_DenseFrac_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/AND_15YR_CN_HMGZD_QC.html">AND_15YR_CN_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/a-NEON_initial_master-database_HMGZD_QC.html">a-NEON_initial_master-database_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/ARC1_HMGZD_QC.html">ARC1_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/ARC2_HMGZD_QC.html">ARC2_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/archive_knb-lter-sgs.179.1_Burke_SoilCN_ESA_b_HMGZD_QC.html">archive_knb-lter-sgs.179.1_Burke_SoilCN_ESA_b_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/archive_knb-lter-sgs.180.1_Burke_SoilCN_ESA_HMGZD_QC.html">archive_knb-lter-sgs.180.1_Burke_SoilCN_ESA_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Barre%20Woods%20Warming_HMGZD_QC.html">Barre Woods Warming_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BcCZO_HMGZD_QC.html">BcCZO_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Berhe_Angelo_HMGZD_QC.html">Berhe_Angelo_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BES_HMGZD_QC.html">BES_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BNZ1_HMGZD_QC.html">BNZ1_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BNZ2_HMGZD_QC.html">BNZ2_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BNZ3_HMGZD_QC.html">BNZ3_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BOU_20YR_roots_HMGZD_QC.html">BOU_20YR_roots_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/BOU_20YR_soilchem_HMGZD_QC.html">BOU_20YR_soilchem_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Calhoun_HMGZD_QC.html">Calhoun_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/cap.557.9_151026011609313008_HMGZD_QC.html">cap.557.9_151026011609313008_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/cap.621.1_151025385897769213_HMGZD_QC.html">cap.621.1_151025385897769213_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CDR_E120_HMGZD_QC.html">CDR_E120_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CDR_E133_HMGZD_QC.html">CDR_E133_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CDR_E141_BioCON_HMGZD_QC.html">CDR_E141_BioCON_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/ChronicN_Metabolite_HMGZD_QC.html">ChronicN_Metabolite_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/ChronicN_stocks_HMGZD_QC.html">ChronicN_stocks_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWTgradient_forestfloor_HMGZD_QC.html">CWTgradient_forestfloor_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWTgradient_litterfall_HMGZD_QC.html">CWTgradient_litterfall_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWTgradient_roots_HMGZD_QC.html">CWTgradient_roots_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWTgradient_soilbulkdensity_HMGZD_QC.html">CWTgradient_soilbulkdensity_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWTgradient_soilCN_HMGZD_QC.html">CWTgradient_soilCN_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWTgradient_soilpHcations_HMGZD_QC.html">CWTgradient_soilpHcations_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/CWT_ws7and2_soilCN_HMGZD_QC.html">CWT_ws7and2_soilCN_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/HBR_W1_HMGZD_QC.html">HBR_W1_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/HBR_W5_HMGZD_QC.html">HBR_W5_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/HBR_W6_HMGZD_QC.html">HBR_W6_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/KBS_scaleup_synthesis_HMGZD_QC.html">KBS_scaleup_synthesis_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/luq.108.1115233_151025981661642905_HMGZD_QC.html">luq.108.1115233_151025981661642905_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/luq.31.389550_151026267179089429_HMGZD_QC.html">luq.31.389550_151026267179089429_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/LUQ%20Litterfall%20in%20tabonuco%20forest_HMGZD_QC.html">LUQ Litterfall in tabonuco forest_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Luquillo%20elevation%20gradient_HMGZD_QC.html">Luquillo elevation gradient_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/McCorkle_2016_ssCZO_Providence_HMGZD_QC.html">McCorkle_2016_ssCZO_Providence_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/McCorkle_ssCZO_Bull_HMGZD_QC.html">McCorkle_ssCZO_Bull_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Moreland_Tian_SSCZO_HMGZD_QC.html">Moreland_Tian_SSCZO_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/NEON_megapitSOIL_a-master-database_HMGZD_QC.html">NEON_megapitSOIL_a-master-database_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/NEON_periodicSoil_a-master-database_HMGZD_QC.html">NEON_periodicSoil_a-master-database_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/NutNetJoined_HMGZD_QC.html">NutNetJoined_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/nwt_greenLakes1982_profile-FeAl_HMGZD_QC.html">nwt_greenLakes1982_profile-FeAl_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/NWT_SnowFence_agb_HMGZD_QC.html">NWT_SnowFence_agb_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/NWT_SnowFence_soils_merge_HMGZD_QC.html">NWT_SnowFence_soils_merge_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/PH_Warming_homog_HMGZD_QC.html">PH_Warming_homog_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/PNW_HJA_Forest%20reference%20stands_HMGZD_QC.html">PNW_HJA_Forest reference stands_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/processed_NutNet_ww_HMGZD_QC.html">processed_NutNet_ww_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/SH_temp_HMGZD_QC.html">SH_temp_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/SIK_bulk_density_HMGZD_QC.html">SIK_bulk_density_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/SIK_Soil_C_HMGZD_QC.html">SIK_Soil_C_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Stacy_2015_ssCZO_Bull_HMGZD_QC.html">Stacy_2015_ssCZO_Bull_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/Stacy_2015_ssCZO_Providence_HMGZD_QC.html">Stacy_2015_ssCZO_Providence_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/SWaN_homog_HMGZD_QC.html">SWaN_homog_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/UMBS_DIRT_Bulk_Den_2004_2009_HMGZD_QC.html">UMBS_DIRT_Bulk_Den_2004_2009_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/UMBS_DIRT_C_N_by_Plot_2004_2014_HMGZD_QC.html">UMBS_DIRT_C_N_by_Plot_2004_2014_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/UMBS_DIRT_pH_2004_2014_HMGZD_QC.html">UMBS_DIRT_pH_2004_2014_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/UMBS_DIRT_Soil_Organic_Matter_2004_2009_HMGZD_QC.html">UMBS_DIRT_Soil_Organic_Matter_2004_2009_HMGZD_QC</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-<a href="qaqc/WW_HF_DIRT_merged_HMGZD_QC.html">WW_HF_DIRT_merged_HMGZD_QC</a>
-</td>
 </tr>
 </tbody>
 </table>
@@ -589,6 +366,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

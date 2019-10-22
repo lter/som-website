@@ -10,8 +10,6 @@ library(knitr)
 
 ## Below is a list of projects proposed to use the SoDaH database:  
 
-
-
 ```{r echo = FALSE, results = 'asis'}
 dt <- data.frame(
   Link    = rep(1,7,1),

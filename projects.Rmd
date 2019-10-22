@@ -38,7 +38,13 @@ dt <- data.frame(
               'In progress, how do we capture heterogeniety with nested design?'
               )
 )
-dt_link <- c(("proj-pages/testbed.jpg"))
+dt_link <- c("",
+             "",
+             "https://docs.google.com/presentation/d/1E_PXtafZNPuxd3vUdz4fBon1JKY7uyhgHquqwyDAMdQ/edit?usp=sharing",
+             "https://docs.google.com/presentation/d/1BlWMDi3KD6x3wcg1LtHeMIde6IkR5QsornIPU6mhyFo/edit?usp=sharing",
+             "",
+             "https://docs.google.com/presentation/d/1JBcKzG1TRpEAu3tPIfjqy7jvJIOusw0paH4FtfBP0lA/edit?usp=sharing",
+             "https://docs.google.com/document/d/1JdfkX7YkpLt-G-lPxe7N-FZ9rsNybKPbhmpfb-mxAcc/edit?usp=sharing")
 
 dt %>% 
   mutate(Link = cell_spec(row.names(.), "html", link = dt_link)) %>%
@@ -48,3 +54,9 @@ dt %>%
             
 #kable(dt)
 ```
+
+## Want to join an existing project?
+#### Contact the lead identified above and pitch in!  
+
+## Have an idea for a new project?  
+#### [Copy this slide](https://docs.google.com/presentation/d/1ozAdynewJ8lZcKTELxbXJPBeId1jKp9QsBk7WXIOu-Y/edit?usp=sharing) and send a copy to wwieder(at)ucar.edu!

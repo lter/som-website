@@ -33,7 +33,7 @@ dt <- data.frame(
               'In progress',
               'Machine learning with WoSIS database, 2019 AGU poster', 
               'In progress',
-              'In progress, how do we capture heterogeniety with nested design?'
+              'In progress, how do we capture heterogeneity with nested design?'
               )
 )
 dt_link <- c("https://docs.google.com/presentation/d/1R4osnHwq8MGth2F2OKbfX4OsG7G2jvYw7oq8JSPDXJc/edit?usp=sharing",

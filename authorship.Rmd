@@ -4,7 +4,7 @@ title: "Authorship"
 
 _Significant portions of this policy came from NutNet, who have carefully thought about how to make data sharing and collaboration transparent, open, and consistent to encourage further engagement.  The NutNet authorship policy can be found at_ http://www.nutnet.umn.edu/authorship.
 
-##Data are public, and harmonizing them into something meaningful is hard
+## Data are public, and harmonizing them into something meaningful is hard
 Data collected as part of NSF funded networks and observatories (LTER, CZO, and NEON) are intended to be publically available.  Much of this legacy data, however, has been collected and archived in ways that preclude meaningful cross site synthesis.  The major objective of this working group, is to collate and harmonize these datasets in a scripted, tractable manner.  
 
 Many of the raw datasets collected for the database have already been published and archived in Electronic data interchange (EDI), or other data repositories.  In some cases, data from unpublished sources have been included in the database (with permission of the data generators). For both published and unpublished data, personal knowledge about the individual sites and experiments are critical for accurately understanding the data products and linking across datasets.  The willingness of many scientists to cooperate and collaborate is what makes this synthesis possible. We have attempted to lay out ground rules to establish a fair process for establishing authorship, and to be inclusive while not diluting the value of authorship on a manuscript. 
@@ -40,24 +40,24 @@ The subject line of the email should include the phrase “OPT-IN PAPER.” This
 
 **8. Final manuscripts should be reviewed and approved by each co-author before submission.**  
 
-**9. All authors and co-authors should fill out their contribution in the [authorship rubric](#rubric_anchor)** and attach it as supplementary material to manuscripts using the database. Lead authors are responsible for ensuring consistency in credit given for contributions, and may alter co-author’s entries in the table to do so. An easy way to manage the author table is with an online google sheet.  
+**9. All authors and co-authors should fill out their contribution in the [authorship rubric] (#rubric_anchor)** and attach it as supplementary material to manuscripts using the database. Lead authors are responsible for ensuring consistency in credit given for contributions, and may alter co-author’s entries in the table to do so. An easy way to manage the author table is with an online google sheet.  
 
 **10. The lead author should carefully review the authorship contribution table** to ensure that all authors have contributed at a level that warrants authorship and that contributions are consistently attributed among authors. Has each author made contributions in at least two areas in the authorship rubric? Did each author provide thoughtful, detailed feedback on the manuscript? Authors are encouraged to contact the workshop coordinators (Wieder & Lajtha) about any confusion or conflicts.  
 
-##Authorship for papers using the database
+## Authorship for papers using the database
 Following publication of the database, which we see as a public resource available through EDI and NCEAS/NCO, we hope numerous scientific questions can be addressed with this database and encourage the broader community to use this as a resource moving forward.  Studies that use multi-site data from the LTER-CZO-NEON database are really leveraging the synthesis activities of the working group.  Towards this end, we’re suggesting an opt-in approach where for the first _two years_ following publication of the database paper. 
 
-####Who should opt in?  
-Authorship must be earned through a _substantial contribution._ Traditionally, project initiation and framing, data analysis and interpretation, and manuscript preparation are all authorship-worthy contributions, and remain so for manuscripts using our database. However, synthesis collaborators have also agreed that collaborators who lead a site from which data are being used in a paper can also opt-in as co-authors, under the following conditions: (1) the collaborators’ contributed to the generation of L1 data that form the basis for the database and are used in the paper’s analysis; and (2) that this collaborator makes additional contributions to the particular manuscript, including data analysis, writing, or editing.    
+#### Who should opt in?  
+Authorship must be earned through a _substantial contribution._ Traditionally, project initiation and framing, data analysis and interpretation, and manuscript preparation are all authorship-worthy contributions, and remain so for manuscripts using our database. However, synthesis collaborators have also agreed that collaborators who lead a site from which data are being used in a paper can also opt-in as co-authors, under the following conditions: (1) the collaborators’ contributed to the generation of L2 data that form the basis for the database and are used in the paper’s analysis; and (2) that this collaborator makes additional contributions to the particular manuscript, including data analysis, writing, or editing.    
 
 Manuscripts published using this synthesis will be accompanied by a supplemental table indicating authorship contributions. You can create and share a standard authorship table using google docs and the cirteral listed  above. For opt-in papers, a co-author is expected to have **at least two** of the following areas checked in the rubric below.  
 
-###Authorship rubric, for papers using the database   {#rubric_anchor}  
+### Authorship rubric, for papers using the database   {#rubric_anchor}  
 * Developed and framed the research question.  
 * Analyzed data or contributed to data analyses.   
 * Conducted model simulation or contributed to model simulations.  
-* Helped to harmonize and aggregate the raw data to cross-site dataset (Level 1a data).  
-* Developed and contributed tools to synthesize and analyze the aggregated (Level 1b data).  
+* Helped to harmonize and aggregate the raw data to cross-site dataset (Level 1 data).  
+* Developed and contributed tools to synthesize and analyze the aggregated (Level 2 data).  
 * Wrote the majority of at least one of the sections of the paper.  
 * Contributed to writing the paper by providing suggestions, text, citations, copy editing.  
 
@@ -65,8 +65,8 @@ Manuscripts published using this synthesis will be accompanied by a supplemental
 Invitations for authorship on the ‘database paper’ that documents the process and product of these efforts, will be extended to anyone who can complete two of the following criteria:  
 
 * Contributed raw data (Level 0 data).   
-* Helped to harmonize and aggregate the raw data to cross-site dataset (Level 1a data).  
-* Developed and contributed tools to synthesize and analyze the aggregated (Level 1b data).  
+* Helped to harmonize and aggregate the raw data to cross-site dataset (Level 1 data).  
+* Developed and contributed tools to synthesize and analyze the aggregated (Level 2 data).  
 * Wrote the majority of at least one of the sections of the paper.  
 * Contributed to writing the paper by providing suggestions, text, citations, copy editing.  
 * Site coordinator, responsible for coordinated data collection, QA-QC, and submission of data products used in the database.  

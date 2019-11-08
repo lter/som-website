@@ -2,10 +2,14 @@
 title: "Tools and tutorials"
 ---
 
-# Tutorials
-
 ## Version Control
 
 - Setting up your computer for git:  https://nceas.github.io/training-git-intro/git-setting-computer.html
 
 - Getting started with git and GitHub using RStudio: https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html
+
+## Using the Shiny app
+
+- Link the the Shiny app: https://cosima.nceas.ucsb.edu/lter-som/
+
+- Tutorial for the Shiny app: https://drive.google.com/file/d/1qAUFprGVZy4LGyaVtU2z6sS3Eo9C76H4/view?usp=sharing

@@ -19,8 +19,6 @@ navbar:
       href: links.html
     - text: "Tools & tutorials"
       href: tools_tutorials.html
-    - text: "QC plots"
-      href: QC_plots.html
   right:
     - icon: fa-github
       href: https://github.com/lter/lterwg-som

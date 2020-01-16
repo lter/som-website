@@ -9,6 +9,8 @@ navbar:
       href: workflow.html
     - text: "Database"
       href: database.html
+    - text: "Data sources"
+      href: data_sources.html
     - text: "Authorship"
       href: authorship.html
     - text: "Projects"

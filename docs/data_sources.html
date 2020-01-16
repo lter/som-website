@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Data sources</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SoDaH</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">About us</a>
+</li>
+<li>
+  <a href="workflow.html">Workflow</a>
+</li>
+<li>
+  <a href="database.html">Database</a>
+</li>
+<li>
+  <a href="data_sources.html">Data sources</a>
+</li>
+<li>
+  <a href="authorship.html">Authorship</a>
+</li>
+<li>
+  <a href="projects.html">Projects</a>
+</li>
+<li>
+  <a href="products.html">Products</a>
+</li>
+<li>
+  <a href="links.html">Links</a>
+</li>
+<li>
+  <a href="tools_tutorials.html">Tools &amp; tutorials</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/lter/lterwg-som">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Data sources</h1>
+
+</div>
+
+
+<div id="catalog-of-data-sources-sans-neon-and-nutnet-for-the-project-database" class="section level2">
+<h2>Catalog of data sources (sans NEON and NutNet) for the project database</h2>
+<p><br></p>
+<table class="table table-striped table-hover table-condensed table" style="margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+network
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+downloadsDirectory
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+dataDirName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+data_doi
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+keyFileName
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+author
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+curator
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+BcCZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1-CEn7y0K1dinNlXe-Myt0KRfvBjZSdaR" target="_blank">BcCZO</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+BcCZO_Key_Key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Kathryn Eilers
+</td>
+<td style="text-align:left;">
+Laurel Brigham
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+Calhoun
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1v7AtlrbPUTedNn3hLcioUKNI3BD8u53a" target="_blank">Calhoun</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key Billings Calhoun CZO_v2.xlsx_KEY_V2
+</td>
+<td style="text-align:left;">
+Sharon Billings
+</td>
+<td style="text-align:left;">
+Sharon Billings
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+Eel River CZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1DyuXGV9gWHKED-_hS8yctHP98jTz85hG" target="_blank">Eel River CZO</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Berhe_Angelo_KEY_V2
+</td>
+<td style="text-align:left;">
+Asmeret Berhe
+</td>
+<td style="text-align:left;">
+Katerina Georgiou
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SCM_JRB_CZO_data
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1DWHt2kdUuy4Yf45JBww5pIj8URtucZAZ" target="_blank">JRB_CZO</a>
+</td>
+<td style="text-align:left;">
+10.1594/IEDA/10063
+</td>
+<td style="text-align:left;">
+JRB_key_KEY_V2
+</td>
+<td style="text-align:left;">
+Craig Rasmussen
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SCM_JRB_CZO_data
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1LYuWpH7HmKZJmo5GmZ3SbqIea4n7jrLE" target="_blank">SCM_CZO</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+SCM_key_KEY_V2
+</td>
+<td style="text-align:left;">
+Craig Rasmussen
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+Shale Hills CZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1S_4Y4DcrSCMxG7liFEdymU2cbvTmGFSI" target="_blank">Shale Hills CZO</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_ShaleHills_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Jason Kaye
+</td>
+<td style="text-align:left;">
+Kaye
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SSCZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/14pZGdxW5F76ZXU16PA8P2IuQwJqbWgYt" target="_blank">McCorkle_2016_ssCZO_Providence</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_McCorkle_2016_ssCZO_Providence_KEY_V2
+</td>
+<td style="text-align:left;">
+Asmeret Asefaw Berhe
+</td>
+<td style="text-align:left;">
+Asmeret Asefaw Berhe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SSCZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1aIGbkHqJEMn6jrX-ghg0DT98-tCw2wsa" target="_blank">McCorkle_ssCZO_Bull</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_McCorkle_2016_ssCZO_Bull_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Asmeret Asefaw Berhe
+</td>
+<td style="text-align:left;">
+Asmeret Asefaw Berhe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SSCZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1bSGVCrC9QKWXQMuThXtzXUzEVWJvergV" target="_blank">Moreland_Tian_SSCZO</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Moreland_Tian_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Asmeret Asefaw Berhe
+</td>
+<td style="text-align:left;">
+Asmeret Asefaw Berhe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SSCZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1HyXlhR7gxYGP_6AQ6PvNikWWSQ9OYWRe" target="_blank">Stacy_2015_ssCZO_Bull</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Stacy_2015_bull_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Erin M. Stacy
+</td>
+<td style="text-align:left;">
+Benjamin Sulman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CZO
+</td>
+<td style="text-align:left;">
+SSCZO
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1qP-j-ZF36DJWwSmgcMHH-M4irEl7xANT" target="_blank">Stacy_2015_ssCZO_Providence</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Stacy_2015_providence_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Erin M. Stacy
+</td>
+<td style="text-align:left;">
+Benjamin Sulman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+AND
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/19zB9YlT4VBSXt95do9uEPnic2Rgje_HG" target="_blank">AND_10YR_DenseFrac</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+AND_DIRT_10YR_CN_densefrac_key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+AND
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1XgA_2wOjjJfQ8B5HCqAIS56PYYRkIZYf" target="_blank">AND_15YR_CN</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+AND_DIRT_15YR_CN_raw_KEY_V2
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+AND
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1ZyZAH6kgsMZ39dfQApGNs9ZgeBBY1Z2C" target="_blank">AND_10YR_CN</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+AND_DIRT_10YR_CN_key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+Bousson DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1dLW8RWN3X5XA95Y5LX8LSBZR5A5Widot" target="_blank">BOU_20YR_roots</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+BOU_20YR_roots_Key_Key.xlsx_KEY_V2
+</td>
+<td style="text-align:left;">
+Rich Bowden, Kate Lajtha
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+Bousson DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1fgTCRDnkpUrKsgDue5l4NF_kDJV84nDu" target="_blank">BOU_20YR_soilchem</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+BOU_20YR_soilchem_Key_Key.xlsx_KEY_V2
+</td>
+<td style="text-align:left;">
+Rich Bowden, Kate Lajtha
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+SIK_DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1Ms3lUZVHp0tGkp_qzmuXz7zX4r1GCDHb" target="_blank">SIK_bulk_density</a>
+</td>
+<td style="text-align:left;">
+10.1016/j.soilbio.2014.03.006
+</td>
+<td style="text-align:left;">
+Key_Key_SIK_bulk_density_KEY_V2
+</td>
+<td style="text-align:left;">
+István Fekete, Zsolt Kotroczó, Kate Lajtha
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+SIK_DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1UEDGslksfETYuF1z9-blLFOVsjl0HCvS" target="_blank">SIK_Soil_C</a>
+</td>
+<td style="text-align:left;">
+10.1016/j.soilbio.2014.03.006
+</td>
+<td style="text-align:left;">
+Key_Key_SIK_DIRT_SOIL_C_KEY_V2
+</td>
+<td style="text-align:left;">
+István Fekete, Zsolt Kotroczó, Kate Lajtha
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+UMBS_DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1glZ3b0NNthGmVdvChJET7no_3CMVkZDo" target="_blank">UMBS_DIRT_Bulk_Den_2004_2009</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+UMBS_DIRT_Bulk_Den_2004_2009_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Knute Nadelhoffer
+</td>
+<td style="text-align:left;">
+Knute Nadelhoffer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+UMBS_DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1MCwO6Ss5dA_EPZ_vv1tUYEjGhDN0Q1N3" target="_blank">UMBS_DIRT_C_N_by_Plot_2004_2014</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+UMBS_DIRT_C_N_2004_2014_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Knute Nadelhoffer
+</td>
+<td style="text-align:left;">
+Knute Nadelhoffer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+UMBS_DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1q5oNPohbqcgrZUHOkUiN0ujFbJjCcnSP" target="_blank">UMBS_DIRT_pH_2004_2014</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+UMBS_DIRT_pH_2004_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Knute Nadelhoffer
+</td>
+<td style="text-align:left;">
+Knute Nadelhoffer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRT
+</td>
+<td style="text-align:left;">
+Wisconsin DIRT
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1ZHnv_a2PhIxQKry4bbCpc40Nrn264035" target="_blank">Wisconsin DIRT</a>
+</td>
+<td style="text-align:left;">
+10.1007/s10533-014-9970-5
+</td>
+<td style="text-align:left;">
+Wisconsin_DIRT_KEY_V2
+</td>
+<td style="text-align:left;">
+Kate Lajtha, Kim Townsend
+</td>
+<td style="text-align:left;">
+Derek Pierson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+AND
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1NJTgXfR_icp01FCcLhmIXH-g0KPFx-e5" target="_blank">PNW_HJA_Forest reference stands</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_HJ_Andrews_KEY_V2
+</td>
+<td style="text-align:left;">
+Erica Smithwick
+</td>
+<td style="text-align:left;">
+Stephany S Chacon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+ARC1
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1nuX4bG5sz9BDDsJdPYYNrRzEBvtS2aqb" target="_blank">ARC1</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_ARC1a_KEY_V2
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+ARC2
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1aPus8aUW3jajr5kh3-9DYLiP8g4KqQgJ" target="_blank">ARC2</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_ARC2a_KEY_V2
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+BES
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1SQJN86VbkaOsOgJ5p82VO7PKSAo-ln_x" target="_blank">BES</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+BES_Key_Key_maste_KEY_V2
+</td>
+<td style="text-align:left;">
+Peter Groffman
+</td>
+<td style="text-align:left;">
+Laurel Brigham
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+BNZ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1CwDGkV1eysj1-l2tyNXQHhh_UZq-FruE" target="_blank">BNZ2</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_BNZ2_b_KEY_V2
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+BNZ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1D04BhsCjSmvL6f64RuSPJepnVr44yQ7h" target="_blank">BNZ3</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_BNZ3_b_KEY_V2
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+BNZ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1fgNDwdZXtuic_PJhvwqBQyRdHyya-uBT" target="_blank">BNZ4</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_BNZ4_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+BNZ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1Wis88r3kzuOHUY6mUXDVP91j_eTCQC7Q" target="_blank">BNZ1</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_BNZ1_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+<td style="text-align:left;">
+Xanthe Walker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CAP
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1BIGUgeCjcWSzvMZa0LM60iPlv6aUovj5" target="_blank">cap.635.1</a>
+</td>
+<td style="text-align:left;">
+10.1007/s10021-013-9681-0
+</td>
+<td style="text-align:left;">
+cap.635.Key_Key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Sharon Hall
+</td>
+<td style="text-align:left;">
+Stevan Earl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CAP
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1Et1fZ0dUJKKiHYs3ujEJog8e8dVK6MIi" target="_blank">cap.621.1</a>
+</td>
+<td style="text-align:left;">
+10.1088/1748-9326/11/8/084007
+</td>
+<td style="text-align:left;">
+cap.621.Key_Key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Sharon Hall
+</td>
+<td style="text-align:left;">
+Stevan Earl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CAP
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1iG3jWR-wgmG7mvwoG3CvS6RJ4-kHS74C" target="_blank">cap.survey_200</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+cap.s200.Key_Key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Stevan Earl
+</td>
+<td style="text-align:left;">
+Stevan Earl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CAP
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1N8Z-q_Dglb2q2TcggAbdEzEwhg2LSynY" target="_blank">cap.557.9</a>
+</td>
+<td style="text-align:left;">
+10.1007/s11270-010-0721-5
+</td>
+<td style="text-align:left;">
+cap.557.Key_Key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Sharon Hall
+</td>
+<td style="text-align:left;">
+Stevan Earl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CDR
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1Hr_Fn9ktYXj5EX1j-qNXo37FcrIp9sJ-" target="_blank">CDR_E133</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+CDR_e133_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Peter Reich
+</td>
+<td style="text-align:left;">
+Sarah Hobbie
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CDR
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1mPyymJ0wnGyTl_OYvg7-2jo7Prfi7cAD" target="_blank">CDR_E141_BioCON</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+e141_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Peter Reich
+</td>
+<td style="text-align:left;">
+Sarah Hobbie
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+CDR
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1So2vk-FdNuEs6ItsJ_K57dn-vO0A_RY9" target="_blank">CDR_E120</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+CDR_e120_KEY_V2
+</td>
+<td style="text-align:left;">
+Peter Reich
+</td>
+<td style="text-align:left;">
+Sarah Hobbie
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1eijhsm00jNr2WAe1eJBFd3DRa6Wt1TKZ" target="_blank">CWT_ws7and2_soilCN</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_CWTwas7and2_soilCN_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1hXUykQ6yL95UDLkP-2UjX4uwbXzwMCu_" target="_blank">CWTgradient_soilCN</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_CWTgradient_soilCN_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1IRv5z2unLTgJVa8T-StB2GiigDgNbU_S" target="_blank">CWTgradient_soilbulkdensity</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_CWTgradient_soilbulkdensity_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1qq_NE3hv1SuzW8A5ZP7F4pSAbvji0q8-" target="_blank">CWTgradient_soilpHcations</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+KeyKey_CWTgradient_soilpHmaster_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1V9nneYJKhgBI5fZQw6euDoHZl3dOaLvA" target="_blank">CWTgradient_litterfall</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_CWTgradient_litterfall_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1y3UNToTiesRF3AI1a3YODJCl6bm9X-52" target="_blank">CWTgradient_forestfloor</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+CWTgradient_forestfloor_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Coweeta
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1ysKicK2KDMB9ZQdCrYpeYLipaEQ9e-KB" target="_blank">CWTgradient_roots</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_CWTgradient_rootbiomass_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Jennifer Knoepp
+</td>
+<td style="text-align:left;">
+Jennifer Fraterrigo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Harvard Forest
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1j8EtUzZE0khoamgm64ooRSNuDp5RnZi9" target="_blank">HF DIRT</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Harvard_DIRT_merged_KEY_V2
+</td>
+<td style="text-align:left;">
+Serita Frey
+</td>
+<td style="text-align:left;">
+Jessica Moore
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Harvard Forest
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1JS7ycTbz6Iq3SR2YE5q4mgnQl5-k7faX" target="_blank">ChronicN_Metabolite</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Harvard_Naddition_soil_chem_metabolite_KEY_V2
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Benjamin Sulman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Harvard Forest
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1mwVFhPrpv8aM8lteMeVBplI1ELGCG4gF" target="_blank">SWaN_homog2</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Copy of Key_Key_Harvard_SWAN_ww_KEY_V2
+</td>
+<td style="text-align:left;">
+Serita Frey
+</td>
+<td style="text-align:left;">
+Jessica Moore
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Harvard Forest
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1NTsN9mqEZAIEb85OtkjAjH9lhx7RIQWz" target="_blank">ProspectHillWarming_2</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Harvard_PHwarming2_KEY_V2
+</td>
+<td style="text-align:left;">
+Serita Frey
+</td>
+<td style="text-align:left;">
+Jessica Moore
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Harvard Forest
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1T1uHhHw7sHAZP_D1z-C4bjy0jPJ_3DJL" target="_blank">Barre Woods Warming</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Harvard_Barre Woods_KEY_V2
+</td>
+<td style="text-align:left;">
+Serita Frey
+</td>
+<td style="text-align:left;">
+Benjamin Sulman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Harvard Forest
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1xohtHtjT20Cb_S7FrxMC-zMEn3xfE78X" target="_blank">ChronicN_stocks</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Harvard_Naddition_Soil_C_KEY_V2
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Benjamin Sulman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Hubbard Brook Soil Carbon Files
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/17I_ZSMXb0L41cXTUkaD0IrQfO7h6XaMg" target="_blank">HBR_W5</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+HBR_W5_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Chris Johnson
+</td>
+<td style="text-align:left;">
+Chris Johnson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Hubbard Brook Soil Carbon Files
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1ANzAyNMYyp9VEPhzKim_bVyxT5g-YB6p" target="_blank">HBR_W6</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+HBR_W6_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Chris Johnson
+</td>
+<td style="text-align:left;">
+Chris Johnson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+Hubbard Brook Soil Carbon Files
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1GLbPXs-K5cg_qcjQxv0GStBNw0ZLksT6" target="_blank">HBR_W1</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+HBR_W1_KeyKey_KEY_V2
+</td>
+<td style="text-align:left;">
+Chris Johnson
+</td>
+<td style="text-align:left;">
+Chris Johnson
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+jrn.210368003.22
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1-6aHb3D8NiLz-CJ5sbXg4NxXzWGBOic-" target="_blank">jrn.210368003.22</a>
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.6073/pasta/48af5c409d729d6426b82818d8606dd5" class="uri">https://doi.org/10.6073/pasta/48af5c409d729d6426b82818d8606dd5</a>
+</td>
+<td style="text-align:left;">
+jrn368003_key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Stevan Earl
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+KBS_scaleup_synthesis
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1Qm89trvjI1Z22vx6yAf54HktZod_grCA" target="_blank">KBS_scaleup_synthesis</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+KBS_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Sasha Kravchenko
+</td>
+<td style="text-align:left;">
+Stuart Grandy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+KNZ_all_homog
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1KC7Qc-4l9aRg-M081d51-6T4yBudT8b6" target="_blank">KNZ_all_homog</a>
+</td>
+<td style="text-align:left;">
+doi.org/10.6073/pasta/dbe5138bad34d0215cede0146fa75c46
+</td>
+<td style="text-align:left;">
+Copy of Key_Key_KNZall_ww_KEY_V2
+</td>
+<td style="text-align:left;">
+Blair/Baer
+</td>
+<td style="text-align:left;">
+Baer/Blair
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+LUQ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1HwpljW7YNlVkjGMla3RRdclgxqaE8l_R" target="_blank">LUQ Litterfall in tabonuco forest</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key Luquillo Litterfall in Tabonuco forest_KEY_V2
+</td>
+<td style="text-align:left;">
+Alan Covich
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+LUQ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1K7sNbhRKOwL8o4Eh-p5M5zBy7qe1mfmu" target="_blank">LUQ elevation gradient soil C and N</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Luquillo elevation gradient soil C, N, bulk density_KEY_V2
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+LUQ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1tEZbMAogSKMQnpARQ-4DxaxkMscn7Is3" target="_blank">luq.108</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key LUQBigdigs_KEY_V2
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+LUQ
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1yC9IXrzU9FvMFyhTdE_GA5cqd0cV6g4L" target="_blank">LUQ elevation gradient litterfall</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Key_Key_Luquillo elevation gradient litterfall_KEY_V2
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+<td style="text-align:left;">
+Whendee Silver
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+NWT_soilC
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/10NBBOmFG-S5AeqwYPbt3-2T0F7vL2bdC" target="_blank">nwt.118.2</a>
+</td>
+<td style="text-align:left;">
+<a href="doi:10.6073/pasta/e7bc0c3b3ebd9073f7941c433103b44d" class="uri">doi:10.6073/pasta/e7bc0c3b3ebd9073f7941c433103b44d</a>
+</td>
+<td style="text-align:left;">
+NWT_118.2_KEY_V2
+</td>
+<td style="text-align:left;">
+Tim Seastedt
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+NWT_soilC
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1en_FFqhZDisuWEPu3XSHMtZvRGlAIgu9" target="_blank">nwt_greenLakes1982_profile-FeAl</a>
+</td>
+<td style="text-align:left;">
+10.6073/pasta/330cac9308b9dc4d3ecf3cb3eec7f1d8
+</td>
+<td style="text-align:left;">
+GLV_Key_Key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Iggy Litaor
+</td>
+<td style="text-align:left;">
+Laurel Brigham
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+NWT_soilC
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1V8CS7zp1i03JmrOTrCmLhlfeqTMhywz2" target="_blank">NWT_SnowFence_soils_2015</a>
+</td>
+<td style="text-align:left;">
+<a href="doi:10.1890/15-1160.1" class="uri">doi:10.1890/15-1160.1</a>
+</td>
+<td style="text-align:left;">
+NWT_snow_fence_soilC_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+Tim Seastedt
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+SEV
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/14at4QhocZUxPQGxQ286KxjyWhdV_vpNn" target="_blank">sev.134.265065</a>
+</td>
+<td style="text-align:left;">
+10.6073/pasta/67b0cfde84800a08d37e4e94a403bfa8
+</td>
+<td style="text-align:left;">
+SEVnmin_key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Carleton White
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+SEV
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1XdQdl_KK1p4SVWOC2p6-_FLntsa0zjxe" target="_blank">SEV_towerGradient</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+SEV_key_master_KEY_V2
+</td>
+<td style="text-align:left;">
+Marcy Litvak
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+ShortGrassSteppe_Soil
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1LZ1Xki9QOLRTrMEr6GXx2kzjxwFMFkv-" target="_blank">sgs.102.17</a>
+</td>
+<td style="text-align:left;">
+<a href="doi:10.6073/pasta/0fbcc23efce6bb64f8bfe9f100054f0d" class="uri">doi:10.6073/pasta/0fbcc23efce6bb64f8bfe9f100054f0d</a>
+</td>
+<td style="text-align:left;">
+SGS_102.17_KEY_V2
+</td>
+<td style="text-align:left;">
+Burke, Ingrid C
+</td>
+<td style="text-align:left;">
+Will Wieder
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+ShortGrassSteppe_Soil
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1o_sk-ezIcwhGtBWlccZH2QcoX7PMS_K4" target="_blank">archive_knb-lter-sgs.179.1_Burke_SoilCN_ESA</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+sgs.179.1_Key_Key_c_KEY_V2
+</td>
+<td style="text-align:left;">
+Ingrid Burke
+</td>
+<td style="text-align:left;">
+Melannie Hartman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LTER
+</td>
+<td style="text-align:left;">
+ShortGrassSteppe_Soil
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1Scc40FdJONqs-yniFwVSTkt9h8Xlvfww" target="_blank">archive_knb-lter-sgs.180.1_Burke_SoilCN_ESA</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+sgs.180.1_Key_Key_a_KEY_V2
+</td>
+<td style="text-align:left;">
+Ingrid Burke
+</td>
+<td style="text-align:left;">
+Melannie Hartman
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+none
+</td>
+<td style="text-align:left;">
+New England pastures
+</td>
+<td style="text-align:left;">
+<a href="https://drive.google.com/drive/folders/1SL0DbIeqsSNroGxWLw5SiuMacprwkq1n" target="_blank">New England pastures</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+New_England_Key_Key_KEY_V2
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Stuart Grady
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+ReynoldsCrk
+</td>
+<td style="text-align:left;">
+<a href="NA" target="_blank">NA</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+RcCZO_a_KEY_V2
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+  <p><br /></p>
+  <p><br /></p>
+<hr>
+<div>
+  <p><a  href="https://lternet.edu/"><img  src="images/LTER-logo.png" width="32%" align="left" /></a> 
+  <a  href="http://criticalzone.org/national/"><img src="images/czo_banner.jpeg" width="30%" align="right" /></a>
+  </p>
+  <p align="center"><a  href="https://www.neonscience.org/"><img src="images/neon_banner.png" width="18%" align="center"/></a></p>
+  </div>
+    <p><br /></p>
+  <div>
+  <p align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"  /> </p>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

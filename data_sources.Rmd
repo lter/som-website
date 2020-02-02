@@ -68,7 +68,8 @@ harvest_key_file <- function(keyFileId) {
     ss = as_id(keyFileId),
     sheet = "Location_data"
   ) %>% 
-    filter(var %in% c('curator_PersonName', 'author_PersonName', 'data_doi', 'network')) %>%
+    # filter(var %in% c('curator_PersonName', 'author_PersonName', 'data_doi', 'network')) %>%
+    filter(var %in% c('curator_PersonName', 'author_PersonName', 'data_doi', 'network') | grepl("doi", var)) %>%
     unnest(Value, keep_empty = TRUE) %>% 
     select(Value, var) %>% 
     spread(key = var, value = Value) %>% 

@@ -73,6 +73,7 @@ harvest_key_file <- function(keyFileId) {
     unnest(Value, keep_empty = TRUE) %>% 
     select(Value, var) %>% 
     spread(key = var, value = Value) %>% 
+    rename(DOI = contains("doi", ignore.case = TRUE)) %>% 
     mutate(
       dataDirName = dataDirMeta[['name']], # this is the data directory name
       dataDirUrl = dataDirMeta[[3]][[1]][["webViewLink"]], # this is the data directory url
@@ -110,7 +111,8 @@ full_join(keyFileInventory, keyFileContent, by = c("id" = "keyFileId")) %>%
     dataDirName,
     # dataDirUrl,
     # dataDirId,
-    data_doi,
+    # data_doi,
+    DOI,
     keyFileName = name,
     # keyFileId = id,
     author = author_PersonName,

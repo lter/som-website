@@ -14,9 +14,9 @@ title: "Database"
 
 [**An overview of how to contriubte data is here**](https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing)
 
-[**The Key_V2 file cound be found here**](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing)
+[**The SoDaH database template file cound be found here**](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing)
 
-*Note* you'll need to copy the Key_V2 file to be able to edit it.
+*Note* you'll need to copy the database template file to be able to edit it.
   
 Please contact wwieder (at) ucar (dot) edu with questions and contributions
   

@@ -1,0 +1,126 @@
+---
+title: "Data sources"
+---
+
+## Catalog of data sources (sans NEON and NutNet) for the project database
+
+<br>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, include=FALSE}
+# use dev versions of sheets and drive
+# devtools::install_github("tidyverse/googledrive")
+# devtools::install_github("tidyverse/googlesheets4")
+library(tidyverse)
+library(googledrive)
+library(googlesheets4)
+library(kableExtra)
+```
+
+```{r catalog-data-downloads, include=FALSE}
+
+# helper function to catalog the contents of each subdirectory of LTER-SOM/Data_downloads
+
+catalog_data_downloads <- function(googleID, directoryName) {
+  
+  directoryInventory <- drive_ls(as_id(googleID), recursive = TRUE) %>% 
+    mutate(downloadsDirectory = directoryName) %>% 
+    select(downloadsDirectory, name, id)
+  
+  return(directoryInventory)
+  
+}
+```
+
+```{r, Data-downloads, include=FALSE}
+
+# catalog the metadata of all subdirectories of LTER-SOM/Data_downloads
+
+Data_downloads <- drive_ls(as_id("https://drive.google.com/open?id=1KhhvBejGtktXMVQa6ME8JGYx257NoZeL")) %>% # recursive fails
+  filter(!grepl("neon|nutnet", name, ignore.case = TRUE)) # cull NEON and NutNet
+# Data_downloads <- Data_downloads %>% slice(18:19) # cut down size for dev
+```
+
+```{r keyFileInventory, include=FALSE}
+
+# for each subdirectory of LTER-SOM/Data_downloads, harvest all contents and pare to KEY_V2 files
+
+keyFileInventory <- map2_df(.x = Data_downloads[['id']], .y = Data_downloads[['name']], catalog_data_downloads) %>% 
+  filter(grepl("KEY_V2", name))
+```
+
+```{r safely-harvest-key-file, include=FALSE}
+
+# helper function (harvest_key_file (wrapped in safely)) to harvest metadata
+# from each KEY_V2 file and its immediate parent directory
+
+harvest_key_file <- function(keyFileId) {
+  
+  # identify key file parent id and retrieve metadata
+  keyFileParentID <- drive_get(as_id(keyFileId))[[3]][[1]][["parents"]][[1]]
+  dataDirMeta <- drive_get(as_id(keyFileParentID))
+  
+  # harvest key file details
+  keyFileMetadata <- googlesheets4::read_sheet(
+    ss = as_id(keyFileId),
+    sheet = "Location_data"
+  ) %>% 
+    # filter(var %in% c('curator_PersonName', 'author_PersonName', 'data_doi', 'network')) %>%
+    filter(var %in% c('curator_PersonName', 'author_PersonName', 'data_doi', 'network') | grepl("doi", var)) %>%
+    unnest(Value, keep_empty = TRUE) %>% 
+    select(Value, var) %>% 
+    spread(key = var, value = Value) %>% 
+    rename(DOI = contains("doi", ignore.case = TRUE)) %>% 
+    mutate(
+      dataDirName = dataDirMeta[['name']], # this is the data directory name
+      dataDirUrl = dataDirMeta[[3]][[1]][["webViewLink"]], # this is the data directory url
+      dataDirId  = dataDirMeta[['id']], # this is the data directory id
+      keyFileId = keyFileId
+    )
+  
+  Sys.sleep(time = 25) # add a sleep to stay within Google's API criteria
+  
+  return(keyFileMetadata)
+  
+}
+
+safely_harvest_key_file <- possibly(harvest_key_file, otherwise = NULL) 
+
+```
+
+```{r keyFileContent, include=FALSE}
+
+# harvest metadata from each KEY_V2 file and its immediate parent directory
+
+keyFileContent <- map_df(.x = keyFileInventory[['id']], safely_harvest_key_file)
+
+```
+
+```{r generate-table, echo=FALSE}
+
+full_join(keyFileInventory, keyFileContent, by = c("id" = "keyFileId")) %>% 
+  mutate(
+    dataDirName = paste("<a href=\"", dataDirUrl,"\" target=\"_blank\">", dataDirName,"</a>", sep="")
+  ) %>% 
+  select(
+    network,
+    downloadsDirectory,
+    dataDirName,
+    # dataDirUrl,
+    # dataDirId,
+    # data_doi,
+    DOI,
+    keyFileName = name,
+    # keyFileId = id,
+    author = author_PersonName,
+    curator = curator_PersonName
+  ) %>% 
+  arrange(network, downloadsDirectory, dataDirName) %>% 
+  kable("html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>% 
+  kable_styling(fixed_thead = T)
+
+```

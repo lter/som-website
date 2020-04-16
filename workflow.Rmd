@@ -32,4 +32,4 @@ Get a quick look at the data [using our Shiny app](https://cosima.nceas.ucsb.edu
 
 ### Data analysis 
 
-Get the latest _tarball_ [using this script](https://github.com/lter/lterwg-som/blob/master/data-processing/get_latest_som.R)
+Get the latest _SoDaH database_ [using this script](https://github.com/lter/lterwg-som/blob/master/data-processing/get_latest_som.R)

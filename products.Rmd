@@ -22,7 +22,6 @@ title: "Products"
 * Malhotra, A., K Todd-Brown, L Nave, et al. (2019). The landscape of soil carbon data: emerging questions, synergies and databases. _Progress in Physical Geography: Earth and Environment_. [doi:10.1177/0309133319873309](https://doi.org/10.1177/0309133319873309). 
 
 
-
 ## Presentations
 ### 2020
 * Emily Kyker-Snowman, Katerina Georgiou, Melannie Hartman, Will R. Wieder, Derek N. Pierson,  Asmeret A. Berhe, Jason P. Kaye, A. Stuart Grandy, "Carbon and nitrogen couplings in a microbially-explicit soil model and the global-scale Soil Data Harmonization (SoDaH) database" Oral presentation ESA 2020.

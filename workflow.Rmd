@@ -10,8 +10,8 @@ title: "Workflow"
 3) Data visualization and interpretation tools (Shiny app);
 4) Data analysis and summary scripts.
 
-
-![The schematic above illustrates our workflow](images/SynthesisWorkflow_1.png)
+### The schematic below illustrates our workflow
+![ ](images/Fig3.png)
 
 ~ 
 

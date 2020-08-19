@@ -4,6 +4,11 @@ title: "Products"
 
 ## Products from this activity include:
 
+
+## SoDaH database
+* [Available at EDI](https://doi.org/10.5194/essd-2020-195)
+
+
 ## Code
 
 * [Data harmonization and aggregation scripts](https://github.com/srearl/soilHarmonization) that produced L1 and L2 data products
@@ -12,14 +17,23 @@ title: "Products"
 
 
 ## Papers
+* Wieder, WR, D Pierson, SR Earl, K Lajtha, S Baer, F Ballantyne, AA Berhe, S Billings, LM Brigham, SS Chacon, J Fraterrigo, SD Frey, K Georgiou, M de Graaff, AS Grandy, MD Hartman, SE Hobbie, C Johnson, J Kaye, E Snowman, ME Litvak, MC Mack, A Malhotra, JAM Moore, K Nadelhoffer, C Rasmussen, WL Silver, BN Sulman, X Walker, & S Weintraub. (2020). SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks version 1.0. _Earth System Science Data Discussion_ [doi:10.5194/essd-2020-195](https://doi.org/10.5194/essd-2020-195).
 
 * Malhotra, A., K Todd-Brown, L Nave, et al. (2019). The landscape of soil carbon data: emerging questions, synergies and databases. _Progress in Physical Geography: Earth and Environment_. [doi:10.1177/0309133319873309](https://doi.org/10.1177/0309133319873309). 
 
 
+
 ## Presentations
+### 2020
+* Emily Kyker-Snowman, Katerina Georgiou, Melannie Hartman, Will R. Wieder, Derek N. Pierson,  Asmeret A. Berhe, Jason P. Kaye, A. Stuart Grandy, "Carbon and nitrogen couplings in a microbially-explicit soil model and the global-scale Soil Data Harmonization (SoDaH) database" Oral presentation ESA 2020.
+
+* Avni Malhotra, Katerina Georgiou, Katherine E. Todd-Brown, Stevan R. Earl, Jennifer W. Harden, Will R. Wieder, Robert B. Jackson "Heterogeneity in soil carbon stocks: Data-based or database-based?" Oral presentation ESA 2020.
+
+* Stevan R. Earl Harmonizing data from disparate data sets to support model development and synthetic analyses" Oral presentation ESA 2020.
+
+* Stevan R. Earl, Will R. Wieder, and Derek N. Pierson. "Soils Data Harmonization (SoDaH): A framework and tools for harmonizing and aggregating cross-study soil organic matter data" Poster ESA 2020.
 
 ### 2019
-
 * Wieder, W. R., K. Lajtha, S. Earl, D. Pierson & the LTER-SOM synthesis team "SOils DAta Harmonization Tools (SoDaH)" NCEAS Seminar, Oct 2019
 
 * Wieder, W. R., K. Lajtha, S. Earl, D. Pierson & the LTER-SOM synthesis team "Data synthesis with SoDah, the SOils DAta Harmonization Tools" LTER Information Managers Seminar, Nov 2019
@@ -29,7 +43,6 @@ title: "Products"
 * Earl, S.R., D.N. Pierson, W.R. Wieder, and K. Lajtha. [Wrangling carbon: Synthesizing multi-scale, multi-site observations across disparate data sets to advance models and understanding of soil carbon cycling](https://eco.confex.com/eco/2019/meetingapp.cgi/Paper/76536). *Invited talk* Meeting of the Ecological Society of America, Louisville, KY, August 2019
 
 ### 2018
-
 * Brigham, L., D. Pierson, K. Lajtha, K. Georgiou, S. Earl, and W. Wieder. "[Making sense of soil organic matter: barriers and opportunities for cross-site synthesis](https://2018lterallscientistsmeeting.sched.com/event/FYpl/making-sense-of-soil-organic-matter-barriers-and-opportunities-for-cross-site-synthesis)" 2018 LTER All-Scientists' Meeting, Asilomar, California, USA.
 
 * Earl, S. J. Porter, and M. Martin. "[Making your data work harder: using shared data to enhance your research](https://2018lterallscientistsmeeting.sched.com/event/FYqK/making-your-data-work-harder-using-shared-data-to-enhance-your-research)". 2018 LTER All-Scientists' Meeting, Asilomar, California, USA. 

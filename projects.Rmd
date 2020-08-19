@@ -13,8 +13,8 @@ library(knitr)
 ```{r echo = FALSE, results = 'asis'}
 dt <- data.frame(
   Link    = rep(1,7,1),
-  Project = c('White paper' ,
-              "Database paper",
+  Project = c('Measurement recommendations for diverse practitioners' ,
+              "SoDaH database paper",
               'Bulk Density & SOC', 
               'Soil stoichiometric coupling & variability',
               'Big gradients and SOC controls', 
@@ -27,8 +27,8 @@ dt <- data.frame(
               'K. Georgiou', 
               'A. Malhotra',
               'D. Pierson'),
-  Status  = c('Revising text', 
-              "Finalizing database, 2019 AGU poster", 
+  Status  = c('_Ecological Applications_ In revision', 
+              "_Earth System Science Data Discussion_ [doi:10.5194/essd-2020-195](https://doi.org/10.5194/essd-2020-195)", 
               'S. Weintraub is exploring PTFs w/ NEON data', 
               'In progress',
               'Machine learning with WoSIS database, 2019 AGU poster', 

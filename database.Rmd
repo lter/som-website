@@ -5,9 +5,13 @@ title: "Database"
 <!-- Start Writing Below in Markdown -->
 
 
-### Progress
- 
+### [The SoDaH database is available at EDI!](https://doi.org/10.5194/essd-2020-195)
   To date we have data from ~ 190 sites and 400 unique locations with >360,000 rows of information
+
+### You can explore the current database here [**Link to the Shiny app!**](https://cosima.nceas.ucsb.edu/lter-som/)
+
+#### This map shows data locations
+![](images/fig4.jpg)
   
 ### Contributions
   We welcome new data contributions, especially repeated measurements from long-term experiments. 
@@ -19,6 +23,7 @@ title: "Database"
 *Note* you'll need to copy the database template file to be able to edit it.
   
 Please contact wwieder (at) ucar (dot) edu with questions and contributions
-  
-### You can explore the current database here [**Link to the Shiny app!**](https://cosima.nceas.ucsb.edu/lter-som/)
-![This map shows data locations](images/Global_map2.png)
+
+
+#### Hierarchical relationship between data fields in the SoDaH database
+![ ](images/Fig2_dataRelationships_horizontal.png)  

@@ -2,7 +2,6 @@
 title: "Database"
 ---
 
-<!-- Start Writing Below in Markdown -->
 ### [The SoDaH database is available at EDI!](https://doi.org/10.5194/essd-2020-195)
   To date we have data from ~ 190 sites and 400 unique locations with >360,000 rows of information
 

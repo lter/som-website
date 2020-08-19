@@ -5,6 +5,7 @@ title: "Database"
 <!-- Start Writing Below in Markdown -->
 
 
+<<<<<<< HEAD
 ### [The SoDaH database is available at EDI!](https://doi.org/10.5194/essd-2020-195)
   To date we have data from ~ 190 sites and 400 unique locations with >360,000 rows of information
 
@@ -13,17 +14,44 @@ title: "Database"
 #### This map shows data locations
 ![](images/fig4.jpg)
   
+=======
+### Progress
+ 
+To date, we have data from ~ 190 sites and 400 unique locations with >360,000 rows of information.
+
+<br>
+
+>>>>>>> 17a0caaf8a53f13f0470f588f318174ada1a6830
 ### Contributions
-  We welcome new data contributions, especially repeated measurements from long-term experiments. 
 
-[**An overview of how to contriubte data is here**](https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing)
+We welcome new data contributions, especially repeated measurements from long-term experiments. 
 
-[**The SoDaH database template file cound be found here**](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing)
+* Please see [here](https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing) for an overview of how to contribute data.
 
-*Note* you'll need to copy the database template file to be able to edit it.
+* Please see [here](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing) to access the SoDaH database template file (*note that you will need to copy the database template file to be able to edit it*).
   
+<<<<<<< HEAD
 Please contact wwieder (at) ucar (dot) edu with questions and contributions
 
 
 #### Hierarchical relationship between data fields in the SoDaH database
 ![ ](images/Fig2_dataRelationships_horizontal.png)  
+=======
+* Please contact wwieder (at) ucar (dot) edu with questions and contributions.  
+
+<br>
+  
+### Accessing the data
+
+* You can explore the database interactively through our [shiny app](https://cosima.nceas.ucsb.edu/lter-som/).
+
+* Access the [published dataset](https://portal.edirepository.org/nis/mapbrowse?scope=edi&identifier=521) available through the Environmental Data Initiative (EDI) data portal.
+
+* Please be sure to cite the data using the citation information available through the EDI data portal at the link above. 
+
+<br>
+
+### Geographic coverage
+
+![map of data coverage](images/Global_map2.png)
+>>>>>>> 17a0caaf8a53f13f0470f588f318174ada1a6830

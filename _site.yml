@@ -3,23 +3,23 @@ output_dir: "docs"
 navbar:
   title: "SoDaH"
   left:
-    - text: "About us"
-      href: index.html
-    - text: "Workflow"
-      href: workflow.html
     - text: "Database"
       href: database.html
-    - text: "Data sources"
-      href: data_sources.html
-    - text: "Authorship"
-      href: authorship.html
+    - text: "Contribute Data"
+      href: contribute_data.html
+    - text: "Workflow"
+      href: workflow.html
     - text: "Projects"
       href: projects.html
     - text: "Products"
       href: products.html
+    - text: "Data sources"
+      href: data_sources.html
+    - text: "Authorship"
+      href: authorship.html
     - text: "Links"
       href: links.html
-    - text: "Tools & tutorials"
+    - text: "Tutorials"
       href: tools_tutorials.html
   right:
     - icon: fa-github

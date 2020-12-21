@@ -3,9 +3,7 @@ title: "Workflow"
 ---
 
 <!-- Start Writing Below in Markdown -->
-
-### Our workflow: 
-
+### After contributing Level-0 data (raw data + a metadata template) SoDaH offers scripts that:
 1) Harmonizes raw data into a common format; 
 2) Aggregates data into an R object;
 3) Data visualization and interpretation tools (Shiny app);

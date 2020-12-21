@@ -3,23 +3,17 @@ title: "Database"
 ---
 
 ### [The SoDaH database is available at EDI!](https://doi.org/10.5194/essd-2020-195)
-  To date we have data from ~ 190 sites and 400 unique locations with >360,000 rows of information
+  - To date we have data from ~ 190 sites and 400 unique locations with >360,000 rows of information
 
-### You can explore the current database here [**Link to the Shiny app!**](https://cosima.nceas.ucsb.edu/lter-som/)
+### SoDaH database description is available in [_Earth System Science Data Discussions_](https://doi.org/10.5194/essd-2020-195)
+ 
 
-### Geographic coverage
+### You can explore the current database using this [**Link to the SoDaH Shiny app**](https://cosima.nceas.ucsb.edu/lter-som/)
+ 
+
+#### Geographic coverage of sites in SoDaH
 ![ ](images/fig4.jpg)
   
-### Contributions
-We welcome new data contributions, especially repeated measurements from long-term experiments. 
-
-* Please see [here](https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing) for an overview of how to contribute data.
-
-* Please see [here](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing) to access the SoDaH database template file (*note that you will need to copy the database template file to be able to edit it*).
-  
-#### Hierarchical relationship between data fields in the SoDaH database
-![ ](images/Fig2_dataRelationships_horizontal.png)  
-* Please contact wwieder (at) ucar (dot) edu with questions and contributions.  
 
 ### Accessing the data
 * You can explore the database interactively through our [shiny app](https://cosima.nceas.ucsb.edu/lter-som/).

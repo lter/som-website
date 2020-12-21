@@ -11,7 +11,7 @@
 
 
 
-<title>Links</title>
+<title>Contribute Data</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -317,32 +317,29 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Links</h1>
+<h1 class="title toc-ignore">Contribute Data</h1>
 
 </div>
 
 
-<!-- Start Writing Below in Markdown -->
-<div id="additional-data-sources" class="section level2">
-<h2>Additional Data Sources:</h2>
-<div id="beyond-lter-czo-and-neon-sites-our-synthesis-includes-data-from-the" class="section level3">
-<h3>Beyond LTER, CZO, and NEON sites our synthesis includes data from the:</h3>
-<p><a href="http://www.nutnet.umn.edu/"><img src="images/nutnet-white_horz.jpg" alt="NutNet" /></a></p>
-<p><a href="https://dirtnet.wordpress.com/">Detrital Input and Removal Experiment (DIRT)</a></p>
+<div id="contributions" class="section level3">
+<h3>Contributions</h3>
+<p>We welcome new data contributions, especially repeated measurements from long-term experiments.</p>
+<ul>
+<li><p>Please see instructions provided <a href="https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing">here</a> for an overview of how to contribute data.</p></li>
+<li><p>Please see <a href="https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing">here</a> to access the SoDaH database template file (<em>note that you will need to copy the database template file to be able to edit it</em>).</p></li>
+</ul>
+<div id="summary-illustration-of-the-hierarchical-relationship-between-data-fields-in-the-sodah-database" class="section level4">
+<h4>Summary illustration of the hierarchical relationship between data fields in the SoDaH database</h4>
+<p><img src="images/Fig2_dataRelationships_horizontal.png" /></p>
+<p>The metadata template is used to map information from individual studies with standardized variables names units that are used in the harmonized SoDaH dataset. Data contributors are asked to provide metadata and location data (on the <code>location</code> tab) as well as profile and layer information (on the <code>profile</code> tab).</p>
+<p>Data on the <code>location</code> tab represents site characteristics for a unique site or location (e.g., latitude, longitude, mean annual temperature from the Prospect Hill Warming experiment at Harvard Forest).</p>
+<p>Data on the <code>profile</code> tab includes profile information about experimental levels (e.g., plots within experimental blocks) and experimental treatments (e.g., +N fertilization) that help clarify how the data were collected. This also includes information collected across soil layer, which includes information on soil chemical and physical properties that may be measured on bulk soils for defined soil horizons or depth increments. All of the data on the profile tab should also correspond to columns of variables that are reported in the Level-0 data (e.g., soil organic C measured at different soil layers).</p>
+<p>After completing the metadata template data contributors of database maintainers will use the harmonization script to broadcasts data provided on the <code>location</code> tab to every row of the harmonized dataset. The harmonization script copies each unique measurement from the <code>profile</code> tab into a column of data in the Level-1 harmonized dataset. Data contributors, therefore, can move variables from the <code>location</code> to <code>profile</code> tabs when appropriate. For example, a gradient study that reports tabular data for individual soil profiles can move information on latitude, longitude, slope, aspect, vegetation communities or parent material (typically on the <code>location</code> tab) onto the <code>profile</code> tab of the metadata template, where appropriate.</p>
+<ul>
+<li>Please contact wwieder (at) ucar (dot) edu with questions and contributions.</li>
+</ul>
 </div>
-</div>
-<div id="complimentary-synthesis-efforts" class="section level2">
-<h2>Complimentary synthesis efforts:</h2>
-<div id="several-other-synthesis-efforts-are-underway-including" class="section level3">
-<h3>Several other synthesis efforts are underway including:</h3>
-<p><a href="https://international-soil-radiocarbon-database.github.io/ISRaD/"><img src="images/ISRaD.jpg" alt="ISRaD" /></a></p>
-<p><a href="http://iscn.fluxdata.org/"><img src="images/iscn.jpg" alt="ICSN" /></a></p>
-</div>
-</div>
-<div id="modeling-resources" class="section level2">
-<h2>Modeling resources:</h2>
-<p>We’re building tools to use the soil biogeochemical testbed with data collected here</p>
-<p><a href="https://github.com/wwieder/biogeochem_testbed_1.1"><img src="images/testbed.jpg" alt="testbed" /></a></p>
 </div>
 
   <p><br /></p>

@@ -324,11 +324,17 @@ $(document).ready(function () {
 
 <div id="contributions" class="section level3">
 <h3>Contributions</h3>
-<p>We welcome new data contributions, especially repeated measurements from long-term experiments.</p>
+<div id="we-welcome-new-data-contributions-especially-repeated-measurements-from-long-term-experiments." class="section level4">
+<h4>We welcome new data contributions, especially repeated measurements from long-term experiments.</h4>
 <ul>
-<li><p>Please see instructions provided <a href="https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing">here</a> for an overview of how to contribute data.</p></li>
-<li><p>Please see <a href="https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing">here</a> to access the SoDaH database template file (<em>note that you will need to copy the database template file to be able to edit it</em>).</p></li>
+<li><p><a href="https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing">Instructions provided here</a> give an overview of how to contribute data.</p></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing">This link provides acess</a> to the SoDaH database template file
+<ul>
+<li><em>Note that you will need to copy the database template file to be able to edit it.</em></li>
+</ul></li>
+<li><p><strong>Please contact</strong> wwieder (at) ucar (dot) edu with questions and contributions.</p></li>
 </ul>
+</div>
 <div id="summary-illustration-of-the-hierarchical-relationship-between-data-fields-in-the-sodah-database" class="section level4">
 <h4>Summary illustration of the hierarchical relationship between data fields in the SoDaH database</h4>
 <p><img src="images/Fig2_dataRelationships_horizontal.png" /></p>
@@ -336,9 +342,6 @@ $(document).ready(function () {
 <p>Data on the <code>location</code> tab represents site characteristics for a unique site or location (e.g., latitude, longitude, mean annual temperature from the Prospect Hill Warming experiment at Harvard Forest).</p>
 <p>Data on the <code>profile</code> tab includes profile information about experimental levels (e.g., plots within experimental blocks) and experimental treatments (e.g., +N fertilization) that help clarify how the data were collected. This also includes information collected across soil layer, which includes information on soil chemical and physical properties that may be measured on bulk soils for defined soil horizons or depth increments. All of the data on the profile tab should also correspond to columns of variables that are reported in the Level-0 data (e.g., soil organic C measured at different soil layers).</p>
 <p>After completing the metadata template data contributors of database maintainers will use the harmonization script to broadcasts data provided on the <code>location</code> tab to every row of the harmonized dataset. The harmonization script copies each unique measurement from the <code>profile</code> tab into a column of data in the Level-1 harmonized dataset. Data contributors, therefore, can move variables from the <code>location</code> to <code>profile</code> tabs when appropriate. For example, a gradient study that reports tabular data for individual soil profiles can move information on latitude, longitude, slope, aspect, vegetation communities or parent material (typically on the <code>location</code> tab) onto the <code>profile</code> tab of the metadata template, where appropriate.</p>
-<ul>
-<li>Please contact wwieder (at) ucar (dot) edu with questions and contributions.</li>
-</ul>
 </div>
 </div>
 

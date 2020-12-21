@@ -1,7 +1,6 @@
 ---
 title: "SOils DAta Harmonization (SoDaH) & Synthesis"
 ---
-
 # 
 ## Synthesizing multi-scale observations, manipulations & models.
 

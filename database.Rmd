@@ -8,8 +8,8 @@ title: "Database"
 ### SoDaH database description is available in [_Earth System Science Data Discussions_](https://doi.org/10.5194/essd-2020-195)
  
 
-### You can explore the current database using this [**Link to the SoDaH Shiny app**](https://cosima.nceas.ucsb.edu/lter-som/)
- 
+### You can explore the current database using this [_link to the SoDaH Shiny app._](https://cosima.nceas.ucsb.edu/lter-som/)
+#  
 
 #### Geographic coverage of sites in SoDaH
 ![ ](images/fig4.jpg)

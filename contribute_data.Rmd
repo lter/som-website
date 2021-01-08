@@ -1,14 +1,15 @@
 ---
 title: "Contribute Data"
 ---
-
-### Contributions
 #### We welcome new data contributions, especially repeated measurements from long-term experiments. 
 
 * [Instructions provided here](https://drive.google.com/file/d/1PCyhULsPMGNlKYgmqOTz7TKBXdC3tINJ/view?usp=sharing) give an overview of how to contribute data.
 
-* [This link provides acess](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing) to the SoDaH database template file 
+* [This link provides access](https://docs.google.com/spreadsheets/d/1dUr1Vwds51u0SVeRm6O7CNcv_IHOsAySucWKQz4W28o/edit?usp=sharing) to the SoDaH database template file 
   - _Note that you will need to copy the database template file to be able to edit it._
+
+* An [example google directory](https://drive.google.com/drive/folders/1Awzb8tkEWBqszcT41V9atronto5wgLJH?usp=sharing), with primary data and a completed metadata template is provided for reference. 
+
 
 * **Please contact** wwieder (at) ucar (dot) edu with questions and contributions. 
   

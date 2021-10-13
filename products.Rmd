@@ -15,9 +15,13 @@ title: "Products"
 
 
 ## Papers
-* Billings SA, K Lajtha, A. Malhotra, AA Berhe, MA de Graaff, S Earl, J Fraterrigo, K Georgiou, S Grandy, SE Hobbie, JAM Moore, K Nadelhoffer, D Pierson, C Rasmussen, WL Silver, BN Sulman, S Weintraub, WR Wieder (2020). Soil organic carbon is not just for soil scientists: Measurement recommendations for diverse practitioners. _Ecological Applications_. In press.
+* Billings SA, K Lajtha, A. Malhotra, AA Berhe, MA de Graaff, S Earl, J Fraterrigo, K Georgiou, S Grandy, SE Hobbie, JAM Moore, K Nadelhoffer, D Pierson, C Rasmussen, WL Silver, BN Sulman, S Weintraub, WR Wieder (2020). Soil organic carbon is not just for soil scientists: Measurement recommendations for diverse practitioners. _Ecological Applications_. 31(3), e02290. [doi:10.1002/eap.2290](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.2290).
 
-* Wieder, WR, D Pierson, SR Earl, K Lajtha, S Baer, F Ballantyne, AA Berhe, S Billings, LM Brigham, SS Chacon, J Fraterrigo, SD Frey, K Georgiou, M de Graaff, AS Grandy, MD Hartman, SE Hobbie, C Johnson, J Kaye, E Snowman, ME Litvak, MC Mack, A Malhotra, JAM Moore, K Nadelhoffer, C Rasmussen, WL Silver, BN Sulman, X Walker, & S Weintraub. (2020). SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks version 1.0. _Earth System Science Data Discussion_ [doi:10.5194/essd-2020-195](https://doi.org/10.5194/essd-2020-195).
+* Wieder, WR, D Pierson, SR Earl, K Lajtha, S Baer, F Ballantyne, AA Berhe, S Billings, LM Brigham, SS Chacon, J Fraterrigo, SD Frey, K Georgiou, M de Graaff, AS Grandy, MD Hartman, SE Hobbie, C Johnson, J Kaye, E Snowman, ME Litvak, MC Mack, A Malhotra, JAM Moore, K Nadelhoffer, C Rasmussen, WL Silver, BN Sulman, X Walker, & S Weintraub. (2020). SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks version 1.0. _Earth System Science Data_ 13(5), 1843-1854.[doi:10.5194/essd-13-1843-2021](https://essd.copernicus.org/articles/13/1843/2021/essd-13-1843-2021.pdf).
+
+* Georgiou, K, A Malhotra, WR Wieder, J Ennis, MD Hartman, BN Sulman, AA Berhe, AS Grandy, E Kyker-Snowman, K Lajtha, JAM Moore, D Pierson, & RB Jackson (2021). Divergent controls of soil organic carbon between observations and process-based models. _Biogeochemistry_. 156, 5–17. [doi:10.1007/s10533-021-00819-2](https://link.springer.com/article/10.1007/s10533-021-00819-2).
+
+* Weintraub-Leff, SR & WR Wieder (2021). Special issue: new insights into soil carbon cycling leveraging networks, synthesis, and long-term studies. _Biogeochemistry_ 156, 1–3. [doi:10.1007/s10533-021-00844-1](https://doi.org/10.1007/s10533-021-00844-1).
 
 * Malhotra, A., K Todd-Brown, L Nave, et al. (2019). The landscape of soil carbon data: emerging questions, synergies and databases. _Progress in Physical Geography: Earth and Environment_. [doi:10.1177/0309133319873309](https://doi.org/10.1177/0309133319873309). 
 

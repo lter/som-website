@@ -27,10 +27,10 @@ dt <- data.frame(
               'A. Malhotra',
               'S. Grandy', 
               'D. Pierson'),
-  Status  = c('_Ecological Applications_ In press', 
-              "_Earth System Science Data Discussion_ [doi:10.5194/essd-2020-195](https://doi.org/10.5194/essd-2020-195)", 
+  Status  = c('_Ecological Applications_, 2020. [doi:10.1002/eap.2290](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.2290)', 
+              "_Earth System Science Data_, 2021. [doi:10.5194/essd-13-1843-2021](https://essd.copernicus.org/articles/13/1843/2021/essd-13-1843-2021.pdf)", 
               'In progress, 2020 ESA talk',
-              'In progress, 2020 AGU talk, 2019 AGU poster', 
+              '_Biogeochemistry_, 2021. [doi:10.1007/s10533-021-00819-2](https://link.springer.com/article/10.1007/s10533-021-00819-2).', 
               'In progress, 2020 ESA talk',
               'S. Weintraub is exploring PTFs w/ NEON data', 
               'In progress, how do we capture heterogeneity with nested design?'
